@@ -1,0 +1,13 @@
+<p>doughnut-details works!</p>
+
+<h1>{{ displayDoughnut.name }}</h1>
+<h2> {{ displayDoughnut.id }}</h2>
+<p> Calories: {{displayDoughnut.calories }} </p>
+<ul *ngFor="let p of displayDoughnut.extras" >
+    <li>{{p}}</li>
+</ul>
+<img src="{{ displayDoughnut.photo }}" width="200px">
+
+
+<button *ngIf="!displayDoughnut.incart" (click)="addNewShoppingCart(displayDoughnut)"> Add To Cart </button>
+

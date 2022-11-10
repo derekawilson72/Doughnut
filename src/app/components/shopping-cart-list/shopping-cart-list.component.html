@@ -1,0 +1,27 @@
+
+<p> shopping cart component</p>
+
+<table>
+    <tr><td>item</td> <td>cost</td> <td>calories</td></tr>
+    <tr *ngFor="let p of shoppingcart; let i = index">
+
+        <td><a routerLink="/doughnuts/{{p.id}}"> {{p.name}} </a></td>
+
+        <td>1.00</td>
+        <td>{{p.calories}}</td>
+        <td> <button (click)="deleteFromCart(i)"> Delete From Cart </button> </td>
+    </tr>
+    <tr>
+        <td> Total</td>
+        <td>{{shoppingTotalCost()}}</td>
+        <td>{{shoppingTotalCalories()}}</td>
+        <td></td>
+    </tr>
+
+
+<div>
+
+    
+    
+
+</div>
